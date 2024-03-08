@@ -10,19 +10,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building...'
-                // Introduce intentional error (nonexistent command)
-                sh 'nonexistent-command'
+                build 'PES2UG21CS387-1'
+                sh 'g++ main.cpp -o output'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
+                SH './output
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'deploy
             }
         }
     }
