@@ -10,7 +10,7 @@ pipeline{
 				userRemoteConfigs: [[url:'https://github.com/pranavrnair22/PES2UG21CS387_Jenkins.git']]])
 			}
 		}
-		ngngfnfgn
+		
 		stage('Build') {
 			steps {
 				build 'PES2UG21CS387-1'
