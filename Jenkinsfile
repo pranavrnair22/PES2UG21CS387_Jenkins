@@ -1,5 +1,4 @@
-﻿
-pipeline{
+﻿pipeline{
 	agent any
 	stages {
 		stage('Clone repository') {
@@ -13,18 +12,12 @@ pipeline{
 			steps {
 				build 'PES2UG21CS387-1'
 				sh 'g++ main.cpp -o output'
-
 			}
-
 		}
-
 		stage('Test') {
 			steps {
-
 				sh './output'
-
 			}
-
 		}	
 
 		stage('Deploy') {
@@ -36,7 +29,6 @@ pipeline{
 	post{
 		failure{
 			error 'Pipeline failed'
-
 		}
 	}
 }
