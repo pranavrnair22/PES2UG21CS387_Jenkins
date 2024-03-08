@@ -15,6 +15,7 @@ pipeline{
 			steps {
 				build 'PES2UG21CS387-1'
 				sh 'g++ main.cpp -o output'
+				erro_comming
 			}
 		}
 		stage('Test') {
