@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'deploy'
+                error 'intentional error'
             }
         }
     }
